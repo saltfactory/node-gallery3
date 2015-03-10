@@ -1,0 +1,45 @@
+{
+  "name": "node-gallery3",
+  "description": "node gallery3 client",
+  "version": "0.0.1",
+  "author": {
+    "name": "SungKwang Song",
+    "email": "saltfactory@gmail.com",
+    "url": "https://twitter.com/saltfactory"
+  },
+
+  "main": "lib/gallery3.js",
+  "bin":{
+    "gallery3":"./bin/gallery3.js"
+  },
+  "scripts":{
+    "test":"test/gallery3-tests.js"
+  },
+  "keywords":[
+    "node",
+    "node.js",
+    "gallery3",
+    "saltfactory"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saltfactory/node-gallery3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/saltfactory/node-gallery3/issues"
+  },
+  "homepage": "https://github.com/saltfactory/node-gallery3",
+
+  "license":"MIT",
+
+  "dependencies":{
+    "request":"latest",
+    "q":"latest",
+    "nopt":"latest"
+  },
+
+  "devDependencies":{
+    "mocha":"latest",
+    "assert":"latest"
+  }
+}
