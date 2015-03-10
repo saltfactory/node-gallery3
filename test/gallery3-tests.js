@@ -9,11 +9,11 @@ var Gallery3 = require('../lib/gallery3');
 
 
 describe('Gallery3 login Test', function(){
-  var gallery3;
+  var gallery3 = new Gallery3();
 
-  before(function(){
-    gallery3 = new Gallery3();
-  });
+  //before(function(){
+  //
+  //});
 
   describe('read config', function(){
     it('read config file', function(){
@@ -39,9 +39,12 @@ describe('Gallery3 login Test', function(){
 
   describe.only('findItem', function(){
     var itemId = 2;
+
+
     var url = gallery3.options.host + gallery3.options.base + '/rest/item/' + itemId;
 
     it('find item by url', function(done){
+      console.log(gallery3);
       gallery3.findItem(url)
         .success(function(result){
           console.log(result)
@@ -145,6 +148,8 @@ describe('Gallery3 login Test', function(){
     };
 
     it('upload file without parent identifier', function(done){
+      //gallery3 = new Gallery3({rootItemId:58});
+
       gallery3.uploadFile(filePath)
         .success(function(result){
           console.log(result)
@@ -167,7 +172,7 @@ describe('Gallery3 login Test', function(){
         .finally(done);
     });
 
-    it('upload file without entity in parent album by id', function(done){
+    it.only('upload file without entity in parent album by id', function(done){
       gallery3.uploadFile(filePath, itemId)
         .success(function(result){
           console.log(result)
